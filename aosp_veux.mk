@@ -13,9 +13,14 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_SUPPORTS_QUICK_TAP := true
+PIXEL_LAUNCHER_VARIANT := glance1
+ICONS_VARIANT := true
 
 # Inherit from veux device
 $(call inherit-product, device/xiaomi/veux/device.mk)
+
+# Inherit from PixelLauncher
+$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
 
 # Inherit some common PixelExperience
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
